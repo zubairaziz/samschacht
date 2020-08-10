@@ -14,6 +14,8 @@
 </script>
 
 <script>
+    import SiteMeta from '../../components/SiteMeta.svelte';
+
     export let post;
 </script>
 
@@ -53,12 +55,12 @@
     }
 </style>
 
-<svelte:head>
-    <title>{post.title}</title>
-</svelte:head>
+<SiteMeta pageTitle={post.title} />
 
-<h1>{post.title}</h1>
+<div class="container">
+    <h1>{post.title}</h1>
 
-<div class="content">
-    {@html post.html}
+    <div class="content">
+        {@html post.html}
+    </div>
 </div>

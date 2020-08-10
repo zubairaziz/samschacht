@@ -5,8 +5,8 @@ module.exports = {
 	plugins: [
 		require("postcss-import")(),
 		require("postcss-url")(),
-		require("postcss-nested")(),
     require("tailwindcss")("./tailwind.config.js"),
+    require("postcss-nested")(),
 		require("autoprefixer")(),
 		!dev &&
 			require("@fullhuman/postcss-purgecss")({
