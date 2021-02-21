@@ -1,62 +1,33 @@
-const defaultTheme = require('tailwindcss/defaultTheme')
-
 module.exports = {
-  purge: [
-    'src/templates.html',
-    'src/components/**/*.svelte',
-    'src/routes/**/*.svelte',
-  ],
+  purge: ['./components/**/*.js', './pages/**/*.js'],
   theme: {
-    screens: {
-      sm: '450px',
-      md: '768px',
-      lg: '1024px',
-      xl: '1280px',
-      '2xl': '1440px',
-      '3xl': '1920',
-      print: { raw: 'print' },
-    },
-    fontWeight: {
-      lighter: 200,
-      light: 300,
-      normal: 400,
-      medium: 500,
-      semibold: 600,
-      bold: 700,
-      bolder: 800
-    },
-    container: {
-      center: true,
-      padding: '10px',
-    },
     extend: {
       colors: {
-        primary: {
-          lighter: '#D499B0',
-          light: '#B44D74',
-          default: '#940039',
-          dark: '#850033',
-          darker: '#590022',
-        },
-        secondary: {
-          lighter: '#99DDC0',
-          light: '#4DC491',
-          default: '#00AB62',
-          dark: '#009A58',
-          darker: '#00673B',
-        },
-        accent: '#f5a800',
+        'accent-1': '#FAFAFA',
+        'accent-2': '#EAEAEA',
+        'accent-7': '#333',
+        success: '#0070f3',
+        cyan: '#79FFE1',
       },
-      fontFamily: {
-        sans: [
-          'Roboto',
-          ...defaultTheme.fontFamily.sans,
-        ]
-      }
+      spacing: {
+        28: '7rem',
+      },
+      letterSpacing: {
+        tighter: '-.04em',
+      },
+      lineHeight: {
+        tight: 1.2,
+      },
+      fontSize: {
+        '5xl': '2.5rem',
+        '6xl': '2.75rem',
+        '7xl': '4.5rem',
+        '8xl': '6.25rem',
+      },
+      boxShadow: {
+        sm: '0 5px 10px rgba(0, 0, 0, 0.12)',
+        md: '0 8px 30px rgba(0, 0, 0, 0.12)',
+      },
     },
   },
-  variants: {
-    fontFamily: false,
-    },
-	plugins: [],
-};
+}
