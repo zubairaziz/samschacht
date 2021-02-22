@@ -15,6 +15,7 @@ export default function Index({ allPosts }) {
       <Layout>
         <Head>
           <title>Next.js Blog Example with {CMS_NAME}</title>
+          <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
         </Head>
         <Container>
           <Intro />
