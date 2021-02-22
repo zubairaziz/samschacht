@@ -8,9 +8,9 @@ slug:
   clean_accents: true
   sanitize_replacement: '_'
 collections:
-  - label: 'Blog'
+  - label: 'Blog Posts'
     name: 'blog'
-    folder: 'content/blogPosts'
+    folder: '_posts'
     create: true
     slug: '{{slug}}'
     fields:
