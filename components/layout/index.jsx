@@ -1,5 +1,5 @@
-import React from 'react';
-import Link from 'next/link';
+import React from 'react'
+import Link from 'next/link'
 
 const Layout = ({ children }) => {
   return (
@@ -32,7 +32,7 @@ const Layout = ({ children }) => {
         }
       `}</style>
     </React.Fragment>
-  );
-};
+  )
+}
 
-export default Layout;
+export default Layout

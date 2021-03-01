@@ -1,9 +1,9 @@
-import React from 'react';
+import React from 'react'
 
-import content from '../../content/about.md';
+import content from '../../content/about.md'
 
 const About = () => {
-  const { attributes, html } = content;
+  const { attributes, html } = content
   return (
     <React.Fragment>
       <h1>{attributes.title}</h1>
@@ -15,6 +15,6 @@ const About = () => {
         }
       `}</style>
     </React.Fragment>
-  );
-};
-export default About;
+  )
+}
+export default About

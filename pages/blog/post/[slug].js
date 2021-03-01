@@ -1,19 +1,19 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 
 class Post extends Component {
   static async getInitialProps({ query }) {
-    const { slug } = query;
-    const blogpost = await import(`../../../content/posts/${slug}.md`).catch((error) => null);
+    const { slug } = query
+    const post = await import(`../../../content/posts/${slug}.md`).catch((error) => null)
 
-    return { blogpost };
+    return { post }
   }
   render() {
-    if (!this.props.blogpost) return <div>not found</div>;
+    if (!this.props.post) return <div>not found</div>
 
     const {
       html,
       attributes: { thumbnail, title },
-    } = this.props.blogpost.default;
+    } = this.props.post.default
 
     return (
       <>
@@ -31,8 +31,8 @@ class Post extends Component {
           }
         `}</style>
       </>
-    );
+    )
   }
 }
 
-export default Post;
+export default Post
